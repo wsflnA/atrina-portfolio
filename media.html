@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Media - ATRINA</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu">Menu</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="creative.html">Creative</a></li>
+        <li><a href="media.html">Media</a></li>
+    </ul>
+</nav>
+
+<div style="text-align: center; padding: 10px; border-bottom: 1px solid #333;">
+    <button onclick="setScheme(1)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #000; color: #fff; border: 1px solid #fff;">■</button>
+    <button onclick="setScheme(2)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #1c1c1c; color: #d0d0d0; border: 1px solid #d0d0d0;">■</button>
+    <button onclick="setScheme(3)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #f0eeeb; color: #2a2a2a; border: 1px solid #2a2a2a;">■</button>
+</div>
+
+<div style="max-width: 800px; margin: 60px auto; padding: 0 16px; text-align: center;">
+
+    <h1 style="margin-bottom: 16px;">Media</h1>
+
+    <p>
+        Beyond photography, I also explore video creation and audio storytelling.
+        These projects reflect my interest in communication, visual narrative, and digital expression.
+    </p>
+
+    <br><br>
+
+    <h2 style="margin-bottom: 16px;">Selected Media Work</h2>
+    <ol style="display: inline-block; text-align: left;" class="muted">
+        <li>My fun videos</li>
+        <li>Short-form online content creation</li>
+        <li>Audio Essay Excerpt</li>
+    </ol>
+
+    <br><br>
+
+    <h2 style="margin-bottom: 16px;">Dining Hall Challenge</h2>
+    <iframe
+        style="width: 100%; max-width: 500px; height: 300px;"
+        src="https://player.bilibili.com/player.html?bvid=BV13Vx3zeEMZ&page=1"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true">
+    </iframe>
+
+    <br><br>
+
+    <h2 style="margin-bottom: 16px;">Yiwu vlog</h2>
+    <iframe
+        style="width: 100%; max-width: 500px; height: 300px;"
+        src="https://player.bilibili.com/player.html?bvid=BV1wG411p7iA&page=1"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true">
+    </iframe>
+
+    <br><br>
+
+    <h2 style="margin-bottom: 16px;">Audio Essay: On Seeing and Designing</h2>
+    <p class="muted" style="margin-bottom: 12px;">
+    This short audio excerpt reflects on perspective, creativity, and human-centered design.
+    </p>
+    <audio controls>
+        <source src="audio/intro.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+
+    <h2 style="margin-bottom: 16px;">Rednote Channel</h2>
+    <p class="muted" style="margin-bottom: 12px;">
+    Click the image below to visit my Rednote page.
+    </p>
+    <a href="https://www.xiaohongshu.com/user/profile/5f24f895000000000100879a" target="_blank">
+        <img src="images/Rednote.jpg"
+             alt="Screenshot of my Rednote page"
+             style="width: 100%; max-width: 400px;">
+    </a>
+
+    <br><br><br>
+    <a href="index.html">← Back to Home</a>
+
+</div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("open");
+    }
+
+    function setScheme(n) {
+    document.body.className = document.body.className
+        .replace(/scheme-\d/, '').trim();
+    document.body.classList.add('scheme-' + n);
+    }
+</script>
+
+</body>
+</html>

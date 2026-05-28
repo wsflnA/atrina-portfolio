@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Projects - ATRINA</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu">Menu</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="creative.html">Creative</a></li>
+        <li><a href="media.html">Media</a></li>
+    </ul>
+</nav>
+
+<div style="text-align: center; padding: 10px; border-bottom: 1px solid #333;">
+    <button onclick="setScheme(1)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #000; color: #fff; border: 1px solid #fff;">■</button>
+    <button onclick="setScheme(2)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #1c1c1c; color: #d0d0d0; border: 1px solid #d0d0d0;">■</button>
+    <button onclick="setScheme(3)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #f0eeeb; color: #2a2a2a; border: 1px solid #2a2a2a;">■</button>
+</div>
+
+<div style="max-width: 800px; margin: 60px auto; padding: 0 16px;">
+
+    <h1 style="margin-bottom: 32px;">Projects</h1>
+
+    <ul style="list-style: none;">
+
+        <li style="margin-bottom: 24px;">
+            <strong>Web Design Workshop for High School Students</strong>
+            <ul style="margin-top: 8px; padding-left: 20px;" class="muted">
+                <li>Designed beginner-friendly HTML lessons</li>
+                <li>Introduced students to structure and digital creativity</li>
+                <li>Focused on user experience and clarity</li>
+            </ul>
+        </li>
+
+        <li style="margin-bottom: 24px;">
+            <strong>AWS Cloud Club – Marketing Initiatives</strong>
+            <ul style="margin-top: 8px; padding-left: 20px;" class="muted">
+                <li>Created promotional materials and visual content</li>
+                <li>Managed communication strategies</li>
+                <li>Strengthened community engagement</li>
+            </ul>
+        </li>
+
+        <li style="margin-bottom: 24px;">
+            <strong>Concept Exploration: VR Therapy</strong>
+            <ul style="margin-top: 8px; padding-left: 20px;" class="muted">
+                <li>Researching immersive technologies</li>
+                <li>Exploring how virtual environments support well-being</li>
+                <li>Studying human-computer interaction principles</li>
+            </ul>
+        </li>
+
+        <li style="margin-bottom: 24px;">
+            <strong>Dalhousie FCS Engagement Work</strong>
+            <ul style="margin-top: 8px; padding-left: 20px;" class="muted">
+                <li>Supported student engagement initiatives</li>
+                <li>Assisted in event coordination and communication</li>
+                <li>Collaborated with team members to improve outreach</li>
+            </ul>
+        </li>
+
+    </ul>
+
+    <div class="image-grid">
+    <img src="images/workshop.jpg" alt="Web Design Workshop" class="styled">
+    <img src="images/awslogo.jpg" alt="AWS Cloud Club Logo" class="styled">
+    </div>
+
+    <h2 style="margin: 48px 0 20px;">Skills</h2>
+    <table class="skills-table">
+        <tr>
+            <th>Category</th>
+            <th>Skills</th>
+            <th>Level</th>
+        </tr>
+        <tr>
+            <td>Web Development</td>
+            <td>HTML, CSS, JavaScript</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>Design</td>
+            <td>UI/UX, Visual Storytelling</td>
+            <td>Intermediate</td>
+        </tr>
+        <tr>
+            <td>Media</td>
+            <td>Photography, Video, Audio</td>
+            <td>Advanced</td>
+        </tr>
+        <tr>
+            <td>Languages</td>
+            <td>English, Farsi, Mandarin</td>
+            <td>Fluent</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <a href="index.html">← Back to Home</a>
+
+</div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("open");
+    }
+
+    function setScheme(n) {
+    document.body.className = document.body.className
+        .replace(/scheme-\d/, '').trim();
+    document.body.classList.add('scheme-' + n);
+    }
+</script>
+
+</body>
+</html>

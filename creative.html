@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Creative Work - ATRINA</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu">Menu</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="creative.html">Creative</a></li>
+        <li><a href="media.html">Media</a></li>
+    </ul>
+</nav>
+
+<div style="text-align: center; padding: 10px; border-bottom: 1px solid #333;">
+    <button onclick="setScheme(1)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #000; color: #fff; border: 1px solid #fff;">■</button>
+    <button onclick="setScheme(2)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #1c1c1c; color: #d0d0d0; border: 1px solid #d0d0d0;">■</button>
+    <button onclick="setScheme(3)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #f0eeeb; color: #2a2a2a; border: 1px solid #2a2a2a;">■</button>
+</div>
+
+<div style="max-width: 800px; margin: 60px auto; padding: 0 16px; text-align: center;">
+
+    <h1 style="margin-bottom: 24px;">Creative Work</h1>
+
+    <p class="muted">Outside of my academic work, I enjoy landscape photography and visual storytelling.</p>
+    <p class="muted">Through capturing natural environments, I explore atmosphere, light, and perspective.</p>
+    <p class="muted">Photography allows me to slow down and observe the world differently.</p>
+    <p class="muted">It complements my interest in human-centered design by sharpening my sensitivity to detail and composition.</p>
+
+    <div id="slideshow">
+        <img id="slide-img"
+             src="images/photo1.jpg"
+             alt="Landscape photography example 1">
+        <br><br>
+        <button onclick="changeSlide(-1)">&#8592;</button>
+        <span id="counter">1 / 6</span>
+        <button onclick="changeSlide(1)">&#8594;</button>
+    </div>
+
+    <br><br>
+    <a href="index.html">← Back to Home</a>
+
+</div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("open");
+    }
+
+    const images = [
+        { src: "images/photo1.jpg", alt: "Landscape photography example 1" },
+        { src: "images/photo2.jpg", alt: "Landscape photography example 2" },
+        { src: "images/photo3.jpg", alt: "Landscape photography example 3" },
+        { src: "images/photo4.jpg", alt: "Landscape photography example 4" },
+        { src: "images/photo5.jpg", alt: "Landscape photography example 5" },
+        { src: "images/photo6.jpg", alt: "Landscape photography example 6" }
+    ];
+
+    let current = 0;
+
+    function changeSlide(direction) {
+        current = current + direction;
+        if (current < 0) current = images.length - 1;
+        if (current >= images.length) current = 0;
+
+        document.getElementById("slide-img").src = images[current].src;
+        document.getElementById("slide-img").alt = images[current].alt;
+        document.getElementById("counter").textContent = (current + 1) + " / " + images.length;
+    }
+
+    function setScheme(n) {
+    document.body.className = document.body.className
+        .replace(/scheme-\d/, '').trim();
+    document.body.classList.add('scheme-' + n);
+    }
+</script>
+
+</body>
+</html>

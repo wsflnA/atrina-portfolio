@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ATRINA</title>
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu">Menu</button>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="creative.html">Creative</a></li>
+        <li><a href="media.html">Media</a></li>
+    </ul>
+</nav>
+
+<div style="text-align: center; padding: 10px; border-bottom: 1px solid #333;">
+    <button onclick="setScheme(1)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #000; color: #fff; border: 1px solid #fff;">■</button>
+    <button onclick="setScheme(2)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #1c1c1c; color: #d0d0d0; border: 1px solid #d0d0d0;">■</button>
+    <button onclick="setScheme(3)" style="margin: 0 6px; padding: 6px 14px; cursor: pointer; background: #f0eeeb; color: #2a2a2a; border: 1px solid #2a2a2a;">■</button>
+</div>
+
+<div class="hero">
+    <div class="hero-text">
+        <h1>ATRIN FARZANE</h1>
+        <p>Storyteller · Explorer</p>
+    </div>
+</div>
+
+<div style="max-width: 800px; margin: 60px auto; padding: 0 16px; display: flex; gap: 40px; align-items: flex-start;">
+    <div style="flex: 3;">
+        <p>
+            I am an Iranian student who grew up in China, shaped by multiple cultures and languages.
+            Living between different environments has influenced the way I see communication, identity, and human connection.
+        </p>
+        <br>
+        <p>
+            I am particularly interested in how digital systems can create meaningful experiences —
+            whether through design, education, or storytelling. My background in languages has given me a sensitivity to nuance,
+            structure, and clarity, which I try to apply to both technology and creative work.
+        </p>
+        <br>
+        <p>
+            Currently, I explore human-centered technology while also expressing myself through photography and media.
+        </p>
+        <br>
+        <p>
+            <a href="projects.html">Projects</a> ·
+            <a href="creative.html">Creative Work</a> ·
+            <a href="media.html">Media</a>
+        </p>
+    </div>
+    <div style="flex: 2;">
+        <img src="images/profile.jpg" alt="Profile photo of Atrin Farzane" class="styled" style="width: 100%; border-radius: 4px;">
+    </div>
+</div>
+
+<div class="contact-form">
+    <h2 style="margin-bottom: 20px;">Get in Touch</h2>
+    <input type="text" placeholder="Your Name" aria-label="Your Name">
+    <input type="email" placeholder="Your Email" aria-label="Your Email">
+    <textarea placeholder="Your message..." aria-label="Your message"></textarea>
+    <button onclick="handleSubmit()">Send</button>
+</div>
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navLinks").classList.toggle("open");
+    }
+
+    function handleSubmit() {
+    const name = document.querySelector('input[type="text"]').value;
+    const email = document.querySelector('input[type="email"]').value;
+    const message = document.querySelector('textarea').value;
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill in all fields before sending.");
+    } else {
+        alert("Thank you for your message, " + name + "! I will get back to you soon.");
+    }
+}
+
+    function setScheme(n) {
+    document.body.className = document.body.className
+        .replace(/scheme-\d/, '').trim();
+    document.body.classList.add('scheme-' + n);
+    }
+</script>
+
+</body>
+</html>
